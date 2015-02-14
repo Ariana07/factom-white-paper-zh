@@ -1,0 +1,14 @@
+## How Factom Servers and Auditing Servers Validate Entries
+Factom splits the two roles that Bitcoin miners do into two tasks: 1 - recording Entries in a final order and 2 - auditing Entries for validity.
+
+1 - The Factom servers accept Entries, assemble them into blocks, and fix their order. After 10 minutes, the Entry ordering is made irreversible by inserting an anchor into the Bitcoin blockchain. Factom does this by creating a hash of the data collected over the 10 minutes, then recording the hash into the blockchain.
+
+2 - The auditing of Entries is a separate process which can be done either with or without trust. Auditing is critical, since Factom is not able to validate Entries before they are included in the Factom dataset.
+
+With trust-based auditing, a thin client could trust a competent auditor they choose. After an Entry was entered into the system, an auditor would verify the Entry was valid. Auditors would submit their own cryptographically signed Entry. The signature would show that the Entry passed all the checks the auditor deemed was required. The audit requirements could in fact be part of a Factom Chain as well. In the real estate example from earlier, the auditor would double check the transfer conformed to local standards. The auditor would publicly attest that the transfer was valid.
+
+Trustless auditing would be similar to Bitcoin. If a system is internally consistent with a mathematical definition of validity like Bitcoin, it can be audited programmatically. If the rules for transfer were able to be audited by a computer, then an Application could download the relevant data and run the audit itself. The application would build an awareness of the system state as it downloaded, verified, and decided which Entries were valid or not.
+
+Mastercoin, Counterparty, and Colored Coins have a similar trust model. These are all client- side validated protocols, meaning transactions are embedded into the Bitcoin blockchain. Bitcoin miners do not audit them for validity; therefore, invalid transactions designed to look like transactions on these protocols can be inserted into the blockchain. Clients that support one of these protocols scan through the blockchain and find potential transactions, check them for validity, and build an interpretation of where the control of these assets lie (usually a Bitcoin address). It is up to the clients to do their own auditing under these protocols.
+
+Moving any of these client-side validated protocols under Factom would be a matter of defining a transaction per the protocol and establishing a Chain to hold the transactions. The transaction protocols wouldn’t be much different under Factom than under Bitcoin, except where Factom allows an easy expression of the information needed instead of having to encode it in some special way into a Bitcoin transaction.

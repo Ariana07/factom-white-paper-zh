@@ -1,0 +1,1 @@
+## Using Factom without Factoids
