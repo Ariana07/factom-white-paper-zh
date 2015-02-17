@@ -1,13 +1,19 @@
-## How Applications Validate Factom Chains
-Factom doesn’t validate Entries; Entries are instead validated client-side by users and Applications. As long as an Application understands and knows the rules a Chain should follow, then the existence of invalid Entries doesn’t cause unreasonable disruption. Entries in a Chain that do not follow the rules can be disregarded by the Application.
-Users can use any set of rules for their Chains, and any convention to communicate their rules to the users of their Chains. The first Entry in a Chain can hold a set of rules, a hash of an audit program, etc. These rules then can be understood by Applications running against Factom to ignore invalid Entries client-side.
+﻿##如何应用验证Factom链
 
-An enforced sequence can be specified. Entries that do not meet the requirements of the specified enforced sequence will be rejected. However, Entries that might be rejected by the rules or the audit program will still be recorded. Users of such chains will need to run the audit program to validate a chain sequence of this type. The Factom servers will not validate rules using the audit program.
+Factom不验证条目;而是在客户端由用户和应用程序来验证。只要应用程序了解并熟知的链应遵循的规则，那么无效条目的存在不会引起干扰。链中不遵守规则的条目会被应用程序忽略。
 
-Validation in the Applications (in combination with user-defined Chains) provides a number of advantages for Applications written on top of Factom:
+用户可以使用任意一组的规则和任何与其链交流的用户所使用的常规。在链中的第一项可以容纳一组规则，和一个审计程序的哈希值，等等。这些规则可以通过运行针对Factom来忽略无效的条目的应用程序来理解。
 
-1. Applications can put into Factom whatever Entries make sense for their application. So, a list of hashes to validate a list of account statements can be recorded as easily as exchanges of an asset.
-2. Rule execution is very efficient. Where the distributed network must execute your validation rules, then validation requires all nodes to do all validation. Client-side validation only requires the systems that care about those rules to run them. Factom allows a Chain to define its rules in whatever language the designers choose, to run on whatever platform they choose, and to use any external data. None of these decisions on the part of one Application has any impact on another Application.
-3. Factom Servers have little knowledge about the Entries being recorded. We use a commitment scheme to limit knowledge, where the commitment to record an Entry is made prior to revealing what the Entry is. This makes Factom’s role in recording Entries very simple, and makes individual server processes public. Factom servers accept information from the network of full nodes, and their decisions and behavior are always in view. Failure to perform can be audited both from the network outside Factom, and within Factom. It is easy to independently verify that a Factom server is fulfilling its Entry- recording responsibility; Factom can’t hide potentially errant behavior.
-4. Recording speeds can be very fast, since the number of checks made by the Factom servers are minimal.
-5. Proofs against any particular Chain in Factom do not require knowledge of any other Chains. Users then only need the sections of Factom they are using and can ignore the rest.
+强制序列可以被指定。没有满足指定强制顺序的条目将被拒绝。然而，可能被这些规则或者设计程序拒绝的的条目将被记录。这种链条的用户将需要运行的审计程序，以验证这种类型的链序列。使用审计程序将是Factom服务器无法验证。
+
+在应用程序中验证（与用户定义链的相结合）在为写在factom顶端的应用程序上有许多优点：
+
+1.只要是应用程序读懂的条目，应用程序都可以投入Factom。那么，一个用来验证账户描述的哈希值可以被轻松记录，就像资产的交换。
+
+2.规则的执行是非常有效的。其中，在分布式网络必须执行的验证规则的地方，验证要求所有节点做的所有验证。客户端验证只需要牵扯到那些运行它们的规则的系统。 Factom允许链来制定规则，无论使用什么语言，在任何一个平台上来运行，并且使用任何外部数据。没有在一个应用程序的一部分的决定对另外一个应用程序产生任何影响。
+
+3. Factom服务器几乎不知道被记录下的条目。我们采取一个承诺方案来限制信息获取，对条目的记录优先于对条目的泄露。这使得Factom在对条目记录的角色更简单，也使得各个服务器进程更公开。 Factom服务器接受来自全节点的网络信息，其决定和行为总处于可视状态。不管在Factom内还是外，失败都将被设计。验证Factom服务器是否履行其条目记录的责任是很容易的，它不会隐藏任何潜在的错误行为。
+
+4.记录速度可以非常快，这是由于由Factom服务器所作检查的次数是最小的。
+
+5.针对Factom任何特定链的证明不需要知道任何其他链的信息。用户只需要他们正在使用的Factom部分，并可以忽略的其余部分。
