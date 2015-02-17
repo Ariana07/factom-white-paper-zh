@@ -1,13 +1,13 @@
-## Proving a Negative
-Bitcoin, land registries, and many other systems need to solve a fundamental problem: proving a negative. They prove some “thing” has been transferred to one person, and prove that thing hasn't been transferred to someone else. While proof of the negative is impossible in an unbounded system, it is quite possible in a bounded system. Cryptocurrencies solve this problem by limiting the places where transactions can be found. Bitcoin transactions can only be found in the Bitcoin blockchain. If a relevant transaction is not found in the blockchain, it is defined from the Bitcoin protocol perspective not to exist and thus the BTC hasn't been sent twice (double spent).
+## 证明“负”
 
-Certain land ownership recording systems are similar. Assume a system where land transfer is recorded in a governmental registry and where the legal system is set up so that unrecorded transfers are assumed invalid (sans litigation). If an individual wanted to check if a title is clear (i.e., that no one else claims the land) the answer would be in the governmental registry. The individual using the government records could prove the negative; the land wasn't owned by a third party. Where registration of title is not required, the governmental registry could only attest to what has been registered. A private transfer might very well exist that invalidates the understanding of the registry.
+比特币，土地登记，以及许多其他系统需要解决的一个根本性的问题：证明*负*。他们证明了一些“东西”已经转移给一个人，并证明事情还没有被转移到别人。而*负*的证明在无界系统是不可能存在的，它很可能存在于在一个有界系统。加密电子货币通过限制其中交易数据所处位置来解决这个问题。比特币交易只能在比特币区块链中找到。如果未在区块链中发现相关的交易，则交易在比特币协议层面中被定义为不存在，因此该比特币尚未被发送两次（双重支付）。
 
-In both of the above cases, the negative can be proven within a context. With Mastercoin the case is very strong. With a land registry, it is limited to the context of the Registry, which may be open to challenge. The real world is messy, and Factom is designed to accommodate not just the precision of digital assets, but the real world’s sometimes messy reality.
+某些土地所有权记录系统是相似的。假设在一个系统中，土地转让被记录在政府的登记表中，而且法律制度也已经确立，使未记录的转移被认为无效的（*若无诉讼sans litigation*）。如果个人要检查所有权是否是明确的（即，没有人占有土地），则可在政府登记表中找到答案。这个人可以利用政府记录来证明*负*，即土地不被第三方拥有。在不要求产权登记时，政府的登记表只能证明已被登记的部分，很可能存在私人转让从而使得登记表无效。
 
-In Factom, there is a hierarchy of data categorization. Factom only records Entries in Chains; the various user-defined Chains have no dependencies that Factom enforces at the protocol level. This differs from Bitcoin, where every transaction is potentially a double-spend, and so it must be validated. By organizing Entries into Chains, Factom allows Applications to have smaller search spaces than if all Factom data were combined together into one ledger.
+上述两种情况下，可以在上下文环境中证明负。万事达币的证明是非常强的。而土地登记的证明仅限于登记处，这可能受到质疑。现实世界是混乱的，Factom被设计为适应不仅是精确的数字资产，还有真实世界中混乱的现实。
 
-If Factom were to be used to manage land transfers, an Application using a Chain to record such registries could safely ignore Entries in the other Chains, such as those used to maintain security camera logs. Were a governmental court ruling to change a land registration, the relevant Chain would be updated to reflect the ruling. The history would not be lost, and where such changes are actually invalid from a legal or other perspective, the record cannot be altered to hide the order of events in Factom.
-Nick Szabo has written about Property Clubs, which have many overlaps with this system. Here is a nugget from his paper "Secure Property Titles with Owner Authority":
+Factom中存在数据分类的层次结构。Factom只记录链中的条目；用户定义的各种链都不依赖Factom在协议层次强制验证。这不同于比特币，比特币的每一笔交易都是一个可能的双重支付，因此它必须被验证。通过把条目组织成链，Factom让应用程序的搜索空间比如果所有Factom数据合并成总账形成的搜索空间要小。
 
-> While thugs can still take physical property by force, the continued existence of correct ownership records will remain a thorn in the side of usurping claimants.
+如果Factom被用来管理土地转让，使用链来登记转让记录的应用程序可以安全地忽略其他链中的条目，比如用于维护安全摄像机的记录。假如政府法庭判决变更土地登记，相关的链将被更新，以反映上述判决。即便如此，历史也不会丢失。转让登记是从法律或其他角度被判无效，实际记录不能被变更，Factom中事件的顺序也就不能被隐藏。
+Szabo）写过关于房产俱乐部的文章，与该系统有许多重叠之处。下面是他的论文《安全产权与所有者权限(Secure Property Titles with Owner Authority)》中极有价值的一段：
+> 恶棍仍然可以通过武力仍获得物质财产，而持续存在的正确的所有权记录将会成为在盗用者的眼中钉。
