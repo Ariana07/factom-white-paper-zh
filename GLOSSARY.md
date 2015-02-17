@@ -5,3 +5,11 @@ An audit trail (also called audit log) is a security-relevant chronological reco
 ## 区块链
 
 Blockchain
+
+## Factoid
+
+即Factom的加密数字货币。
+
+## 加密数字货币
+
+cryptocurrency
