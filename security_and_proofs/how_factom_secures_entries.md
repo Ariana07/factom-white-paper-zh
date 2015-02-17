@@ -1,8 +1,10 @@
-## How Factom Secures Entries
-Factom extends Bitcoin's feature set to record events outside of monetary transfers. Factom has a minimal ruleset for adding permanent Entries. Factom pushes most data validation tasks to the client side. The only validation Factom enforces are those required by the protocol to trade Factoids, convert Factoids to Entry Credits, and to ensure Entries are properly paid for and recorded.
+## Factom如何保护条目
 
-> Factom has a few rules regarding token incentives for running the network and for internal consistency, but it cannot check the validity of statements recorded in the chains used by its users.
+Factom扩展了比特币的功能集，以记录货币转移之外的事件。Factom具有添加永久条目的最简规则集。Factom把对大多数数据的验证任务交给了客户端，协议仅要求Factom在如下过程中强制实施的验证：交易Factoids，将Factoids转换为条目信用，并确保条目被正确支付和记录。
 
-Bitcoin limits transactions to those moving value from a set of inputs to a set of outputs. Satisfying the script required of the inputs (generally requiring certain signatures) is enough for the system to ensure validity. This is a validation process that can be automated, so the auditing process is easy. If Factom were used, for instance, to record a deed transfer of real estate, Factom would be used to simply record the process occurred. The rules for real estate transfers are very complex. For example, a local jurisdiction may have special requirements for property if the buyer is a foreigner, farmer, or part time resident. A property might also fall into a number of categories based on location, price, or architecture. Each category could have its own rules reflecting the validation process for smart contracts. In this example, a cryptographic signature alone is insufficient to fully verify the validity of a transfer of ownership. Factom then is used to record the process occurred rather than validate transfers.
 
-Bitcoin miners perform two primary tasks. First, they resolve double spends. Seeing two conflicting transactions that spend the same funds twice, they resolve which one is admissible. The second job miners perform (along with the other full nodes) is auditing. Since Bitcoin miners only include valid transactions, one that is included in the blockchain can be assumed to have been audited. A thin client does not need to know the full history of Bitcoin to see if value they receive has already been spent. (See SPV.)
+> Factom有一些为了维持网络运行和内部持续性的有关代币刺激的规则，但它不能检查记录在用户使用的链中的语句的有效性。
+
+ 比特币限制交易把价值从一组输入移动到一组输出。满足输入（通常需要一定的签名）所需的脚本足够为系统确保可靠性。这个验证过程可以实现自动化，所以审计过程很容易。例如，如果Factom被用以记录房地产契据转让，Factom将仅记录发生的过程。房地产转让规则是非常复杂的。例如，如果买家是外国人，农民，或非常驻者，地方管辖可能对财产有特殊要求。也有可能财产基于位置、价格或建筑被归为若干个类别，每个类别都可以有自己的规则来反映智能合同的验证过程。在这个例子中，仅有单独一个加密签名不足以充分验证所有权转移的有效性。于是Factom仅记录发生的过程，而不是验证所有权转移。
+
+比特币矿工执行两个主要任务。首先，他们防止双重支付。看到将同一笔资金花费了两次的两笔冲突交易，他们判断哪一个是应该受理的，从而解决冲突。矿工（连同其他全结点）执行的第二项任务是审计。由于比特币矿工只算入有效的交易，凡是包含在区块链中的交易都可以看作已经被审计。Thin client（瘦客户机）并不需要知道比特币的完整历史来确认他们收到的比特币已经被花过了。 （见[SPV](https://en.bitcoin.it/wiki/Thin_Client_Security#Simplified_Payment_Verification_.28SPV.29)）。
