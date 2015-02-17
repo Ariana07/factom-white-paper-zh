@@ -1,4 +1,3 @@
-# Factom_White_Paper_zh
 
 《Factom白皮书》 中文协同翻译
 =============================================
@@ -14,19 +13,19 @@ Factom公司近日发布一份白皮书，大致构思了一种概念型网络�
 
 ### 参与步骤（页尾有详细的过程演示）
 * fork主仓库
-* 按照章节（页面）认领翻译(每次申请一个章节)，在下面这个`README.md`里找还没有被人申请的章节，写上（@你的github号），给主仓库的`master`分支提pull request；
-* 提的pull request 被确认，合并到主仓库后，代表你申请的章节*占位*完成，开始翻译；
+* 按照章节（页面）认领翻译(每次申请一个章节)，在下面这个`README.md`里找还没有被人申请的章节，模仿已有的格式添加@你的Github账号，给主仓库的`master`分支提pull request；
+* 提的pull request被确认，合并到主仓库后，代表你申请的章节*占位*完成，开始翻译；
 * 翻译过程请参 *翻译协作规范* ，完成翻译后提交pull request给主仓库的`master`分支；
-* 校核完成后，从主仓库的`master`分支合并到主`publish`分支；
-* 全部翻译完成后，生成PDF文档和网页发布；
+* 校核（全部翻译完成后开始校核）完成后，从主仓库的`master`分支合并到`gh-pages`分支；
+* 全部翻译完成后，我[@Ariana07](https://github.com/Ariana07)会生成PDF文档，修改gh-pages发布网页；
+* 如果有兴趣加入翻译，可以[发邮件与我联系](mailto:contact@imariana.com)，我会尽快回复。
 
 
 ### 翻译协作规范
 为了让大家协作顺畅，需要每一个人遵循如下协作规范~
 
-- 使用markdown进行翻译，文件名必须使用英文，因为中文的话gitbook编译的时候会出问题
-- 翻译后的文档请放到SOURCE文件夹下的对应章节中，然后pull request即可，我会用gitbook编译成网页
-- 工作分支为`master`，用于GitHub的pages服务
+- 找到相应的markdown文档的链接进行翻译，不要修改文件名
+- 工作分支为`master`
 - fork过去之后新建一个分支进行翻译，完成后pull request这个分支，没问题的话我会合并到`master`分支中
 - 有其他任何问题都欢迎发issue，我们看到了会尽快回复
 
@@ -40,16 +39,16 @@ Factom公司近日发布一份白皮书，大致构思了一种概念型网络�
 
 ## 认领章节记录
 
-* [概述](README.md)
-* [Abstract](abstract/README.md)
-* [Design Goals](design_goals/README.md)
-* [The Factom Ecosystem](the_factom_ecosystem/README.md)
-* [Security and Proofs](security_and_proofs/README.md)
-   * [How Factom Secures Entries](security_and_proofs/how_factom_secures_entries.md)
-   * [How Factom Servers and Auditing Servers Validate Entries](security_and_proofs/how_factom_servers_and_auditing_servers_validate_entries.md)
-   * [Proving a Negative](security_and_proofs/proving_a_negative.md)
-   * [How Applications Validate Factom Chains](security_and_proofs/how_applications_validate_factom_chains.md)
-   * [How Factom Federated Servers Manage Chains](security_and_proofs/how_factom_federated_servers_manage_chains.md)
+* [概述及翻译规则](README.md) [@Ariana07](https://github.com/Ariana07)
+* [Abstract](abstract/README.md) [@Ariana07](https://github.com/Ariana07)
+* [Design Goals](design_goals/README.md) [@Tuphie](https://github.com/Tuphie)
+* [Factom生态系统](the_factom_ecosystem/README.md) [@Ariana07](https://github.com/Ariana07)
+* [安全及验证](security_and_proofs/README.md)
+   * [Factom如何保护条目](security_and_proofs/how_factom_secures_entries.md) [@Ariana07](https://github.com/Ariana07)
+   * [How Factom Servers and Auditing Servers Validate Entries](security_and_proofs/how_factom_servers_and_auditing_servers_validate_entries.md) [@Tuphie](https://github.com/Tuphie)
+   * [证明“负”](security_and_proofs/proving_a_negative.md) [@Ariana07](https://github.com/Ariana07)
+   * [How Applications Validate Factom Chains](security_and_proofs/how_applications_validate_factom_chains.md) [@Tuphie](https://github.com/Tuphie)
+   * [How Factom Federated Servers Manage Chains](security_and_proofs/how_factom_federated_servers_manage_chains.md) [@Ariana07](https://github.com/Ariana07)
 * [Factom System Overview](factom_system_overview/README.md)
    * [Directory Layer: How the Directory Layer Organizes Merkle Roots](factom_system_overview/directory_layer_how_the_directory_layer_organizes_merkle_roots.md)
    * [Entry Block Layer: How the Entry Block Layer Organizes Hashes and Data](factom_system_overview/entry_block_layer_how_the_entry_block_layer_organizes_hashes_and_data.md)
@@ -89,8 +88,9 @@ Factom公司近日发布一份白皮书，大致构思了一种概念型网络�
 ***
 ## 参与者
 - [Ariana07](https://github.com/ariana07)
+- [Tuphie](https://github.com/Tuphie)
 
 ## 鸣谢
-- Material Design 中文协同翻译
-参照了协同翻译规则。
+- [Material Design 中文协同翻译](https://github.com/1sters/material_design_zh)
+参照制定了协同翻译规则。
 
