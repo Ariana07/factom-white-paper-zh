@@ -1,12 +1,14 @@
-# Abstract
+# 摘要
 > “Honesty is subversive” - Paul Snow
 
-In today’s global economy trust is in rare supply. This lack of trust requires the devotion of a tremendous amount of resources to audit and verify records - reducing global efficiency, return on investment, and prosperity.
+> “诚信是颠覆性的。”——保罗·斯诺
 
-Moreover, incidents such as the 2010 United States foreclosure crisis demonstrate that in addition to being inefficient, the current processes are also terribly inaccurate and prone to failure. Factom removes the need for blind trust by providing the world with the very first precise, verifiable, and immutable audit trail.
+在当今的全球经济中，信任极为罕见。由于信任的缺乏，人们需要投入大量资源来审计、核实交易记录，这降低了全球效率，损失了投资回报，阻碍了经济繁荣。
 
-In the past, records have been difficult to protect, challenging to synchronize, and impossible to truly verify because of the manual effort involved. Computers automated some of these tasks, but they are even harder to protect, synchronize, and verify because computer records are so easy to change. Authority is fragmented across innumerable independent systems.
+此外，2010年美国止赎危机等事件表明，目前的过程不仅低效，还非常不准确，容易产生错误。Factom提供了世界上第一个精确、可核查、不可篡改的审计跟踪，让人们不再需要盲目信任。
 
-Blockchains provide a distributed mechanism to lock in data, making data verifiable and independently auditable. Bitcoin’s blockchain is the most trusted immutable data store in existence; however, it is not very useful for non-Bitcoin transactions. Factom gives businesses access to blockchain technology without getting bogged down in currencies.
+在过去，由于所涉及的人工工作，记录一直难以保护和同步，而且不能真正检验核实。计算机使其中的一些任务实现了自动化，但纪录变得更难保护、同步、核实，因为电脑记录极易篡改。权威跨越无数的独立系统，变得支离破碎。
 
-In this paper, we describe how Factom creates a distributed, autonomous protocol to cost effectively separate the Bitcoin blockchain from the Bitcoin cryptocurrency. We discuss client- defined Chains of Entries, client-side validation of Entries, a distributed consensus algorithm for recording Entries, and a blockchain anchoring approach for security.
+区块链提供了一个分布式的机制，以锁定数据，让数据可以被核查和独立审计。比特币的区块链是现存最值得信赖的不可篡改的数据存储；然而，它对非比特币交易不起作用。Factom为商业提供了区块链技术，而无需在货币流通中陷入困境。
+
+在本文中，我们将介绍Factom如何创建一个分布式的自治协议，经济高效地把比特币区块链技术从比特币加密货币中独立出来。我们讨论了*客户定义的条目链，客户端条目检验，记录条目的分布式共识算法，和安全的区块链锚定方法*。
