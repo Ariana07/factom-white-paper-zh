@@ -1,14 +1,17 @@
-## How Factom Servers and Auditing Servers Validate Entries
-Factom splits the two roles that Bitcoin miners do into two tasks: 1 - recording Entries in a final order and 2 - auditing Entries for validity.
+﻿Factom服务器和审计服务器如何验证条目
 
-1 - The Factom servers accept Entries, assemble them into blocks, and fix their order. After 10 minutes, the Entry ordering is made irreversible by inserting an anchor into the Bitcoin blockchain. Factom does this by creating a hash of the data collected over the 10 minutes, then recording the hash into the blockchain.
+Factom将比特币矿机的任务分为两个部分：1 - 按照最终顺序记录订单和 2 - 审计订单的有效性。
 
-2 - The auditing of Entries is a separate process which can be done either with or without trust. Auditing is critical, since Factom is not able to validate Entries before they are included in the Factom dataset.
+1 - Factom服务器接受条目，并将它们组装成区块，以解决他们的订单。 大约10分钟后，通过在比特币区块链中插入一个锚使得订单顺序不可逆转。 Factom通过在这十分钟给数据创造一个哈希值来实现加密，并将哈希值记录进区块链。
 
-With trust-based auditing, a thin client could trust a competent auditor they choose. After an Entry was entered into the system, an auditor would verify the Entry was valid. Auditors would submit their own cryptographically signed Entry. The signature would show that the Entry passed all the checks the auditor deemed was required. The audit requirements could in fact be part of a Factom Chain as well. In the real estate example from earlier, the auditor would double check the transfer conformed to local standards. The auditor would publicly attest that the transfer was valid.
+2 - 交易记录的审计是一个独立的进程，有没有trust（这里翻译还需斟酌）都可以。审计是至关重要的，因为只有Factom被包括在Factom数据集之后，才能使交易生效。
 
-Trustless auditing would be similar to Bitcoin. If a system is internally consistent with a mathematical definition of validity like Bitcoin, it can be audited programmatically. If the rules for transfer were able to be audited by a computer, then an Application could download the relevant data and run the audit itself. The application would build an awareness of the system state as it downloaded, verified, and decided which Entries were valid or not.
+有了以信任为基础的审计，瘦客户机能够信任他们选择的有能力的审计师。当一个条目进入系统之后，审计人员将验证条目是有效的。审计将提交自己的加密签名条目。签名会显示该条目通过了所有要求的检查。审计需求实际上是一个Factom链的一部分。在早期房地产为例，审计师根据当地法律法规会仔细检查资产的转移。审核员将公开证明转移是有效的。
 
-Mastercoin, Counterparty, and Colored Coins have a similar trust model. These are all client- side validated protocols, meaning transactions are embedded into the Bitcoin blockchain. Bitcoin miners do not audit them for validity; therefore, invalid transactions designed to look like transactions on these protocols can be inserted into the blockchain. Clients that support one of these protocols scan through the blockchain and find potential transactions, check them for validity, and build an interpretation of where the control of these assets lie (usually a Bitcoin address). It is up to the clients to do their own auditing under these protocols.
+没有信任的的审计类似于比特币。如果一个系统，像比特币一样，其内部一致的，有有效性的数学定义，它可以通过编程审核。如果用于转移的规则能够由计算机进行审核，则应用程序可以下载有关的数据，并且自身进行审计。在它下载，验证，并决定哪些条目是有效还是无效的时候，该应用程序将建立系统状态的意识。
 
-Moving any of these client-side validated protocols under Factom would be a matter of defining a transaction per the protocol and establishing a Chain to hold the transactions. The transaction protocols wouldn’t be much different under Factom than under Bitcoin, except where Factom allows an easy expression of the information needed instead of having to encode it in some special way into a Bitcoin transaction.
+Mastercoin，Counterparty和Colored Coins有类似的信任模型。这些是所有客户端的验证协议，意思是交易将被嵌入到比特币区块链中。比特币矿机不审核其有效性;因此，基于这项协议，那些被设计的看起来像交易的无效交易会被插入区块链。支持其中一项协议的客户通过浏览这些区块链寻找潜在的交易，检查其有效性，并建立一个控制资产存放地点的解释模型（通常是一个比特币地址）。它是由客户端在基于这些协议来进行审计所决定的。
+
+在Factom下，任何客户端验证协议的移动都关系到限定每个协议的交易，并建立一个链来保存这些交易。
+Factom的交易协议跟比特币的没有太大差别，除了Factom可以让所需信息有更简便的表达，而不需要用特殊的方式将其加密进入比特币交易中。
+
