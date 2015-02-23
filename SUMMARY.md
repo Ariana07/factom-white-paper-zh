@@ -15,7 +15,7 @@
    * [Entry Block Layer: How the Entry Block Layer Organizes Hashes and Data](factom_system_overview/entry_block_layer_how_the_entry_block_layer_organizes_hashes_and_data.md)
    * [Entries: How Entries are Created](factom_system_overview/entries_how_entries_are_created.md)
    * [Chains: How Entries are Organized into Chains](factom_system_overview/chains_how_entries_are_organized_into_chains.md)
-* [The Factom Peer-to-Peer Network](the_factom_peer-to-peer_network/README)
+* [The Factom Peer-to-Peer Network](the_factom_peer-to-peer_network/README.md)
    * [Factom Peer-to-Peer Communications](the_factom_peer-to-peer_network/factom_peer-to-peer_communications.md)
    * [Data Preservation and Dissemination](the_factom_peer-to-peer_network/data_preservation_and_dissemination.md)
 * [A Deeper Discussion of Factom](a_deeper_discussion_of_factom/README)
