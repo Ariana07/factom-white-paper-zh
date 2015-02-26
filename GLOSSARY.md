@@ -14,10 +14,6 @@ Blockchain
 
 cryptocurrency
 
-## 条目信用
-
-Entry Credits
-
 ## 序列哈希值
 
 Serial hash
@@ -53,3 +49,11 @@ full node
 ## 局部节点
 
 partial node
+
+## 条目币
+
+Entry credit
+
+## 初始分配
+
+homesteading
