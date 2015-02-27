@@ -1,12 +1,11 @@
-# Design Goals
-**Factom Creates a Faster, Cheaper, Bloat-free Way to Develop Blockchain Based Applications**
+# 设计目标
 
-When Satoshi Nakamoto launched the Bitcoin blockchain he revolutionized the way transactions were recorded. There had never before existed a permanent, decentralized, and trustless ledger of records. Developers have rushed to create applications built on top of this ledger. Unfortunately, they have been running into a few core constraints intrinsic to the original design tradeoffs of Bitcoin.
+**Factom创造一种更迅速，更价廉，能够避免膨胀的方式来开发基于区块链的应用**
 
-1) Speed – because of the design of the decentralized, proof-of-work consensus method used by Bitcoin, difficulty requirements are adjusted to maintain roughly 10 minute confirmation times. For applications that wish greater security, multiple confirmations may be required. A common requirement is to wait for 6 confirmations, which can lead to wait times over an hour.
+自从发明了比特币区块链，中本聪彻底改变了记录交易的方式。在此之前还从来没有永久性，去中心化的，不可靠的分类账记录。开发者们纷纷设计建立在这个账之上的应用程序。但是，他们遇到了几个由原始比特币交易设计引发的几个关键瓶颈。
 
-2) Cost – the default transaction cost is around .01 mBTC (roughly $0.003 USD in November 2014). The exchange price of BTC has been volatile throughout its history. If the price of BTC rises, then the cost of transactions can go up. This can prove to be a serious cost barrier to applications that need to manage very large numbers of transactions. Additionally, many factors including constraints on block size and reward halving could act to increase transaction fees.
+1）速度 - 因为比特币采用去中心化，工作证明统一的设计，难度需求调整到来保持大约10分钟确认时间。对有更高安全要求的应用，多个确认可能是必需的。一个常见的要求是要等待6次确认，等待的时间超过一个小时。
 
-3) Bloat – with the Bitcoin blockchain size limit of 1 MB per block, transaction throughput is capped at 7 transactions per second. Any application that wants to write and store information using the blockchain will add to the traffic. This problem has become politically charged as various parties seek to increase the block size limit.
+2）成本 - 默认的交易成本大约是0.01 mBTC（约0.003美元美元于2014年11月）。 BTC的交易价格在其历史上也一直处于波动。如果BTC的价格上涨，则交易成本也随之上涨。这对于一个有庞大交易数量的应用来说实在是过高的成本。此外，许多因素，包括对区块大小和奖励减半的限制也可能导致交易费用增加。
 
-Factom is a protocol designed to address these three core constraints. Factom creates a protocol for Applications that provide functions and features beyond currency transactions. Factom constructs a standard, effective, and secure foundation for these Applications to run faster, cheaper, and without bloating Bitcoin.
+3）膨胀 - 每块比特币区块链不能超过1MB，这导致交易量限制在每秒七次。任何想要想要使用区块链来编写或者存储信息的应用都将增加交易通量。这一问题已被政治化处理，许多党派都在寻求提高区块的规模限制。 Factom是旨在打破这三大关键瓶颈的协议。 Factom创建了一个为应用程序提供超越货币交易的功能和特性的协议。 Factom构建了一个标准的，有效的，安全的基础，保障应用程序运行速度更快，更便宜，没有比特币膨胀现象。

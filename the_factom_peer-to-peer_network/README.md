@@ -1,1 +1,4 @@
-# The Factom Peer-to-Peer Network
+# Factom点对点网络
+
+Factom具有的点对点（P2P）网络，它实现了两个目标：通信和数据保存。
+
