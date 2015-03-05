@@ -1,1 +1,1 @@
-# Appendix 3: Timestamping into Bitcoin
+附录3：给比特币加盖时间戳
