@@ -1,1 +1,1 @@
-# Appendix 5: Proof of Stake Similarities
+# 附录 5: 权益认证相似性
