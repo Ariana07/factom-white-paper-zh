@@ -1,0 +1,959 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>The Factom Peer-to-Peer Network | 《Factom白皮书》 中文协同翻译</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.0.3">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../the_factom_peer-to-peer_network/factom_peer-to-peer_communications.html" />
+    
+    
+    <link rel="prev" href="../factom_system_overview/chains_how_entries_are_organized_into_chains.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="6" data-basepath=".." data-revision="1426685434796">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="abstract/README.html">
+            
+                
+                    <a href="../abstract/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Abstract
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="design_goals/README.html">
+            
+                
+                    <a href="../design_goals/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Design Goals
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="the_factom_ecosystem/README.html">
+            
+                
+                    <a href="../the_factom_ecosystem/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         The Factom Ecosystem
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="security_and_proofs/README.html">
+            
+                
+                    <a href="../security_and_proofs/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                         Security and Proofs
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="4.1" data-path="security_and_proofs/how_factom_secures_entries.html">
+            
+                
+                    <a href="../security_and_proofs/how_factom_secures_entries.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                         How Factom Secures Entries
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.2" data-path="security_and_proofs/how_factom_servers_and_auditing_servers_validate_entries.html">
+            
+                
+                    <a href="../security_and_proofs/how_factom_servers_and_auditing_servers_validate_entries.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                         How Factom Servers and Auditing Servers Validate Entries
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.3" data-path="security_and_proofs/proving_a_negative.html">
+            
+                
+                    <a href="../security_and_proofs/proving_a_negative.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                         Proving a Negative
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4" data-path="security_and_proofs/how_applications_validate_factom_chains.html">
+            
+                
+                    <a href="../security_and_proofs/how_applications_validate_factom_chains.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                         How Applications Validate Factom Chains
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.5" data-path="security_and_proofs/how_factom_federated_servers_manage_chains.html">
+            
+                
+                    <a href="../security_and_proofs/how_factom_federated_servers_manage_chains.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                         How Factom Federated Servers Manage Chains
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5" data-path="factom_system_overview/README.html">
+            
+                
+                    <a href="../factom_system_overview/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                         Factom System Overview
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="5.1" data-path="factom_system_overview/directory_layer_how_the_directory_layer_organizes_merkle_roots.html">
+            
+                
+                    <a href="../factom_system_overview/directory_layer_how_the_directory_layer_organizes_merkle_roots.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                         Directory Layer: How the Directory Layer Organizes Merkle Roots
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.2" data-path="factom_system_overview/entry_block_layer_how_the_entry_block_layer_organizes_hashes_and_data.html">
+            
+                
+                    <a href="../factom_system_overview/entry_block_layer_how_the_entry_block_layer_organizes_hashes_and_data.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                         Entry Block Layer: How the Entry Block Layer Organizes Hashes and Data
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.3" data-path="factom_system_overview/entries_how_entries_are_created.html">
+            
+                
+                    <a href="../factom_system_overview/entries_how_entries_are_created.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                         Entries: How Entries are Created
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.4" data-path="factom_system_overview/chains_how_entries_are_organized_into_chains.html">
+            
+                
+                    <a href="../factom_system_overview/chains_how_entries_are_organized_into_chains.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                         Chains: How Entries are Organized into Chains
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="6" data-path="the_factom_peer-to-peer_network/README.html">
+            
+                
+                    <a href="../the_factom_peer-to-peer_network/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                         The Factom Peer-to-Peer Network
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="6.1" data-path="the_factom_peer-to-peer_network/factom_peer-to-peer_communications.html">
+            
+                
+                    <a href="../the_factom_peer-to-peer_network/factom_peer-to-peer_communications.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                         Factom Peer-to-Peer Communications
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.2" data-path="the_factom_peer-to-peer_network/data_preservation_and_dissemination.html">
+            
+                
+                    <a href="../the_factom_peer-to-peer_network/data_preservation_and_dissemination.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                         Data Preservation and Dissemination
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="7" data-path="a_deeper_discussion_of_factom/README.html">
+            
+                
+                    <a href="../a_deeper_discussion_of_factom/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                         A Deeper Discussion of Factom
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="7.1" data-path="a_deeper_discussion_of_factom/how_to_name_factom_chains.html">
+            
+                
+                    <a href="../a_deeper_discussion_of_factom/how_to_name_factom_chains.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                         How to Name Factom Chains
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="7.2" data-path="a_deeper_discussion_of_factom/using_factoids_to_purchase_entry_credits.html">
+            
+                
+                    <a href="../a_deeper_discussion_of_factom/using_factoids_to_purchase_entry_credits.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                         Using Factoids to Purchase Entry Credits
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="7.3" data-path="a_deeper_discussion_of_factom/using_entry_credits_to_purchase_entries.html">
+            
+                
+                    <a href="../a_deeper_discussion_of_factom/using_entry_credits_to_purchase_entries.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                         Using Entry Credits to Purchase Entries
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="7.4" data-path="a_deeper_discussion_of_factom/setting_the_cost_of_entries_with_a_central_server_oracle.html">
+            
+                
+                    <a href="../a_deeper_discussion_of_factom/setting_the_cost_of_entries_with_a_central_server_oracle.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                         Setting the Cost of Entries with a Central Server Oracle
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="7.5" data-path="a_deeper_discussion_of_factom/using_factom_without_factoids.html">
+            
+                
+                    <a href="../a_deeper_discussion_of_factom/using_factom_without_factoids.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                         Using Factom without Factoids
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="7.6" data-path="a_deeper_discussion_of_factom/first_entries_on_entry_chains_support_for_homesteading.html">
+            
+                
+                    <a href="../a_deeper_discussion_of_factom/first_entries_on_entry_chains_support_for_homesteading.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                         First Entries on Entry Chains: Support for Homesteading
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8" data-path="conclusion/README.html">
+            
+                
+                    <a href="../conclusion/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                         Conclusion
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9" data-path="bibliography/README.html">
+            
+                
+                    <a href="../bibliography/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                         Bibliography
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="10" data-path="appendix_1/README.html">
+            
+                
+                    <a href="../appendix_1/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                         Appendix 1
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="10.1" data-path="appendix_1/how_to_create_useful_applications_today_using_the_factom_protocol.html">
+            
+                
+                    <a href="../appendix_1/how_to_create_useful_applications_today_using_the_factom_protocol.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                         How to Create Useful Applications Today Using the Factom Protocol
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11" data-path="appendix_2/README.html">
+            
+                
+                    <a href="../appendix_2/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                         Appendix 2
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="11.1" data-path="appendix_2/denial_of_service_from_spam.html">
+            
+                
+                    <a href="../appendix_2/denial_of_service_from_spam.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                         Denial of Service from Spam
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11.2" data-path="appendix_2/sybil_attack_of_the_dht.html">
+            
+                
+                    <a href="../appendix_2/sybil_attack_of_the_dht.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.2.</b>
+                        
+                         Sybil Attack of the DHT
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11.3" data-path="appendix_2/man_in_the_middle.html">
+            
+                
+                    <a href="../appendix_2/man_in_the_middle.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.3.</b>
+                        
+                         Man in the Middle
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11.4" data-path="appendix_2/dictionary_attack.html">
+            
+                
+                    <a href="../appendix_2/dictionary_attack.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.4.</b>
+                        
+                         Dictionary Attack
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11.5" data-path="appendix_2/denial_of_chain.html">
+            
+                
+                    <a href="../appendix_2/denial_of_chain.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.5.</b>
+                        
+                         Denial of Chain
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11.6" data-path="appendix_2/fraudulent_servers.html">
+            
+                
+                    <a href="../appendix_2/fraudulent_servers.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.6.</b>
+                        
+                         Fraudulent Servers
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="12" data-path="appendix_3/README.html">
+            
+                
+                    <a href="../appendix_3/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                         Appendix 3
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="12.1" data-path="appendix_3/how_the_factom_timestamping_mechanism_secures_transactions_in_the_blockchain.html">
+            
+                
+                    <a href="../appendix_3/how_the_factom_timestamping_mechanism_secures_transactions_in_the_blockchain.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.1.</b>
+                        
+                         How the Factom Timestamping Mechanism Secures Transactions in the Blockchain
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="13" data-path="appendix_4/README.html">
+            
+                
+                    <a href="../appendix_4/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                         Appendix 4
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="13.1" data-path="appendix_4/how_factom_is_different_from_other_blockchain_technologies.html">
+            
+                
+                    <a href="../appendix_4/how_factom_is_different_from_other_blockchain_technologies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.1.</b>
+                        
+                         How Factom Differs from Bitcoin and Sidechains
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="13.2" data-path="appendix_4/how_factom_differs_from_bitcoin_and_sidechains.html">
+            
+                
+                    <a href="../appendix_4/how_factom_differs_from_bitcoin_and_sidechains.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.2.</b>
+                        
+                         How Factom is Different from Other Blockchain Technologies
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="14" data-path="appendix_5/README.html">
+            
+                
+                    <a href="../appendix_5/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                         Appendix 5
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="14.1" data-path="appendix_5/factom_consensus_similarities_and_differences_from_proof_of_stake.html">
+            
+                
+                    <a href="../appendix_5/factom_consensus_similarities_and_differences_from_proof_of_stake.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.1.</b>
+                        
+                         Factom Consensus Similarities and Differences from Proof of Stake
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="14.2" data-path="appendix_5/stake_grinding.html">
+            
+                
+                    <a href="../appendix_5/stake_grinding.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.2.</b>
+                        
+                         Stake Grinding
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="14.3" data-path="appendix_5/nothing_at_stake.html">
+            
+                
+                    <a href="../appendix_5/nothing_at_stake.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.3.</b>
+                        
+                         Nothing at Stake
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <a href="../GLOSSARY.html" class="btn pull-left" aria-label="Open Glossary"><i class="fa fa-sort-alpha-asc"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >《Factom白皮书》 中文协同翻译</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_1105">
+                    
+                        <h1 id="factom">Factom点对点网络</h1>
+<p>Factom具有点对点（P2P）网络，它实现了两个目标：通信和数据保存。</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../factom_system_overview/chains_how_entries_are_organized_into_chains.html" class="navigation navigation-prev " aria-label="Previous page: Chains: How Entries are Organized into Chains"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../the_factom_peer-to-peer_network/factom_peer-to-peer_communications.html" class="navigation navigation-next " aria-label="Next page: Factom Peer-to-Peer Communications"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
