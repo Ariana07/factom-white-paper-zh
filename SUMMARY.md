@@ -44,4 +44,5 @@
 * [Appendix 5](appendix_5/README.md)
    * [Factom Consensus Similarities and Differences from Proof of Stake](appendix_5/factom_consensus_similarities_and_differences_from_proof_of_stake.md)
    * [Stake Grinding](appendix_5/stake_grinding.md)
+   * [Nothing at Stake](appendix_5/nothing_at_stake.md)
 

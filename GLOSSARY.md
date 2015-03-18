@@ -53,3 +53,19 @@ full node
 ## 局部节点
 
 partial node
+
+## 奖励减半
+
+reward halving 
+
+## 梅克尔根
+
+Merkle root
+
+## 条目币
+
+Entry credit
+
+## DDOS
+
+DDoS, distributed denial of service, the intentional paralyzing of a computer network by flooding it with data sent simultaneously from many individual computers。
