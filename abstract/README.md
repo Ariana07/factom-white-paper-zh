@@ -1,4 +1,4 @@
-﻿# 摘要
+# 摘要
 > “Honesty is subversive” - Paul Snow
 
 > “诚信是颠覆性的。”——保罗·斯诺
