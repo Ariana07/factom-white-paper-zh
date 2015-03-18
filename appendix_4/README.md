@@ -1,1 +1,1 @@
-# Appendix 4: Comparing Factom with Other Blockchain Technologies
+# 附录 4: 将Factom与其他区块链技术比较
